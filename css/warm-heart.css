@@ -1,0 +1,486 @@
+@font-face{
+        font-family:NanumSquare;
+        src:url(../webfont/NanumSquareR.woff) format('woff');
+         src:url(../webfont/NanumSquareR.eot) format('eot');
+}
+body{
+     font-family:NanumSquare, sans-serif ; 
+    margin: 0; padding: 0;
+}
+header, .main_vis, section, footer{
+    width:100%;
+}
+a{ text-decoration: none;}
+.center_box{
+    position: relative;
+    width:1200px;
+    margin:0 auto;
+/*    border:1px solid black;*/
+}
+header{
+    display: flex;
+    flex-flow: column;
+    border-bottom: 1px solid black;
+    padding: 0  0 10px   0 ;
+}
+header .center_box h1{
+    text-align: center;
+    height:100px;
+    line-height: 100px;
+}
+header .center_box ul{
+    width:1200px;
+    margin: 0 auto;
+    height:20px;
+    line-height: 20px;
+    display: flex;
+}
+header .center_box ul li{
+    width:200px;
+    text-align: center;
+    line-height: 20px;  
+}
+header .center_box ul li a{
+    font-size: 15px;
+    font-weight: bold;
+    color:#333;
+}
+header .sub_menu {
+    display: flex;
+}
+header .sub_menu ol{
+    width:200px;
+    text-align: left;  
+    background-color:bisque;
+    height:150px;
+    display: none;
+}
+header .sub_menu ol:nth-child(1){
+    padding-left: 10px;
+}
+header .sub_menu ol:nth-child(2){
+    padding-left: 20px;
+}
+header .sub_menu ol:nth-child(3){
+    padding-left: 10px;
+}
+header .sub_menu ol:nth-child(4){
+    padding-left: 10px;
+}
+header .sub_menu ol li{
+    padding: 5px 0;
+}
+header .sub_menu ol li a{
+    font-size: 14px;
+}
+.sub_bg{
+    width:100%;
+    height:150px;
+    background-color:cornflowerblue;
+    position:absolute;
+    top:122px;
+    z-index: -1;
+   display: none;
+}
+.main_vis{
+    padding-top:150px;
+    height:700px;
+    background:url(../images/bg1.png) center center no-repeat;
+    background-size: cover;
+}
+.main_vis .flex{
+    display: flex;
+    width:1055px;
+    margin:0 auto;
+    height:454px;
+    box-shadow: 0 2px 20px black, 0 2px 5px blue; 
+}
+.main_vis .flex .main_img{
+    position:relative;
+    width:695px;
+    height:454px;
+}
+.main_vis .flex .main_img li{
+    position:absolute;
+}
+.main_vis .flex .box{
+    width:360px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.main_vis .flex .box li{
+    width:180px;
+    height:227px;
+    padding-top: 20px;
+/*    text-align: center;*/
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.main_vis .flex .box .area1{
+    background-color:#0c5fbc;
+}
+.main_vis .flex .box .area2{
+    background-color:#9b9b9b;
+}
+.main_vis .flex .box .area3{
+    background-color:#393939;
+}
+.main_vis .flex .box .area4{
+    background-color:#e43375;
+}
+.main_vis .flex .box li h4{
+    margin: 20px 0 0 20px;
+}
+.main_vis .flex .box li h4 a{
+    font-size: 20px;
+/*    line-height: 1.5;*/
+    color: white;
+}
+.main_vis .flex .box li p{
+    position: relative;
+    text-align: center;
+}
+.main_vis .flex .box li:hover{
+    background-color: #ffd83e;
+}
+.main_vis .flex .box li p img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
+    margin: auto;
+}
+/*------------------------------section 영역----------------------------------*/
+section .center_box{
+    height: auto;
+    position: relative;
+    margin: auto;
+    top: 130px;
+}
+.blue_area{
+    width: 800px;
+    height: 400px;
+    background: #0c5fbc url(../images/illust1.png) no-repeat right bottom;
+    position: relative;
+}
+/*
+- background속성
+    -background-color: 배경색 지정
+        속성값에 
+    -background-transparent 속성지정=>투명도를 지정
+    -background: inherit => 부모요소의 값을 상속하도록 지정
+    -background: position => 배경 위치 지정
+        - top left 속성(0% 0%): 맨 위 앞쪽에 배치
+        - xpos ypos: cm 단위로 위치 지정
+        - top center(0% 50%): 맨 위 중앙에 위치
+        - right top(100% 0%): 맨 위 오른쪽에 위치
+        - left center(0% 50%): 왼쪽 중앙에 위치
+        - center center(50% 50%): 정중앙에 위치
+        - right center(100% 50%): 오른쪽 중앙에 위치
+        - left bottom(0% 100%): 왼쪽 바닥에 위치
+    -background-attachment: 배경의 고정여부를 결정
+        - scroll => 스크롤 가능하게 지정
+        - fixed => 배경을 고정되도록 지정
+        - local => 요소의 내용과 함께 배경이 스크롤되도록 지정
+*/
+.blue_area h2{
+    width: 350px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    padding: 100px 0 10px 0px;
+    margin-left: 50px;
+    text-shadow: 2px 3px 4px black;
+    border-bottom: 5px solid white;
+}
+.blue_area span{
+    width: 130px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 120px;
+    right: 160px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    background-color: deepskyblue;
+    border-radius: 15px;
+    text-shadow: 0 0 3px black;
+}
+.blue_area p{
+    width: 450px;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+.center_box .center_area{
+    height: 400px;
+    display: flex;
+}
+.center_box .sky_area{
+    width: 400px;
+    height: 400px;
+    background: cornflowerblue url(../images/illust2.png) no-repeat 0% 8%;
+}
+.center_box .sky_area h3{
+    width: 130px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid white;
+}
+.center_box .sky_area ul{
+    width: 90%;
+    margin: 15px auto;
+    height: 250px;
+    background-color: rgba(255,255,255,0.7);
+    padding: 10px;
+    box-sizing: border-box;
+}
+.center_box .sky_area ul h4{
+    padding: 10px;
+}
+.center_box .sky_area ul h4 a{
+    font-size: 14px;
+    color: #333;
+}
+.center_box .sky_area ul li a{
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.center_box .sky_area ul li:nth-of-type(1){
+    margin-bottom: 40px;
+}
+.more_btn2{
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: darkblue;
+    line-height: 1;
+    margin-left: 300px;
+}
+.more_btn2 a{
+    color: white;
+}
+.gray_area{
+    width: 400px;
+    height: 400px;
+    background-color: lightgray;
+    position: relative;
+}
+.gray_area h3{
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+    margin-top: 40px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid white;
+    color: white;
+}
+.gray_area ul{
+    width: 90%;
+    margin: 10px auto;
+}
+.gray_area ul li{
+    padding: 10px;
+    text-align: center;
+}
+.gray_area ul li p{
+    display: inline-block;
+    margin-left: 15px;
+    line-height: 2;
+}
+.gray_area ul li p a{
+    font-weight: bold;
+    color: chocolate;
+}
+.triangle{
+    position: absolute;
+    top: 38%;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-right: 50px solid #ffd83e;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+}
+.kakao_area{
+    width: 400px;
+    height: 400px;
+    background: #ffd83e;
+    position: relative;
+}
+.kakao_area img{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+    margin: auto;
+}
+.kakao_area p{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 230px;
+    height: auto;
+    text-align: center;
+    line-height: 2;
+    font-size: 20px;
+    font-weight: bold;
+    color: #371b03;
+}
+.pink_area{
+    position: relative;
+    left: 400px;
+    bottom: 0;
+    width: 800px;
+    height: 400px;
+    background-color: mediumvioletred;
+}
+.pink_area h3{
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    margin: auto;
+    width: 280px;
+    height: 50px;
+    padding: 10px;
+    border-bottom: 5px solid white;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.pink_area ul{
+    position: absolute;
+    top: 180px;
+    left: 100px;
+    margin: auto;
+    display: flex;
+    width: 80%;
+}
+.pink_area ul li{
+    width: 50%;
+/*    border: 1px solid white;*/
+    display: flex;
+}
+.pink_area ul li:nth-child(2){
+    width: 60%;
+}
+.pink_area ul li .lbl{
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    line-height: 1.8;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+.pink_area ul li:nth-child(1) #user_id{
+    display: inline-block;
+    height: 30px;
+    width: 133px;
+    font-size: 15px;
+    border: 0;
+}
+.pink_area p{
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    margin: auto;
+    width: 90%;
+    height: 35px;
+    line-height: 35px;
+    background: url(../images/smile.png) no-repeat;
+/*    border: 1px solid white;*/
+    text-indent: 50px;
+    color: white;
+}
+.more_btn3{
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    margin: auto;
+    display: block;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+}
+/*------------------------------하단 박스슬라이더 영역----------------------------------*/
+.bottom_b{
+    width: 1200px;
+    margin: auto;
+    height: 70px;
+    padding: 200px 0 100px 0;
+    box-sizing: border-box;
+}
+.bottom_b ul{
+    width: 1935px;
+    position: relative;
+}
+.bottom_b ul li{
+    display: inline-block;
+    padding: 0 10px 0 0;
+    width: 225px;
+    position: absolute;
+}
+/*------------------------------sitemap----------------------------------*/
+.site_box{
+    width: 1200px;
+    margin: 0 auto;
+    height: 300px;
+    text-align: center;
+/*    border: 1px solid red;*/
+    background-color: #383838;
+}
+ .half_circle{
+    width: 86px;
+    height: 40px;
+    background-color: white;
+    color: #45bbff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    box-sizing: border-box;
+    border-radius: 0 0 70px 70px;
+    margin: auto;
+    padding-top: 10px;
+}
+.site_box ul{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 50px;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+.site_box ul>li{
+    text-align: center;
+    padding: 0 40px;
+    float: left;
+}
+.site_box ul>li a{
+    color: white;
+}
+.site_box ul>li ol li{
+    padding: 10px 0;
+}
+.footer_box{
+    float: left;
+}
